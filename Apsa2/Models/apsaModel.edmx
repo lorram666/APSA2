@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ARQUIVO_DIGITALModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="AD_ATUALIZA_SITUACAO_CLIENTES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="AD_CARREGA_CONDOMINIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CNPJ" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="AD_CRI_CONDOMINIOS_SEM_CNPJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="AD_CRI_CONDOMINIOS_SEM_LANCAMENTOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Agencia" Type="int" Mode="In" />
+          <Parameter Name="Conta" Type="int" Mode="In" />
+          <Parameter Name="Origem" Type="char" Mode="In" />
+          <Parameter Name="Competencia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AD_DROPA_TABELAS_TEMPORARIAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="AD_FORNECEDORES_SP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ContaCliente" Type="varchar" Mode="In" />
+          <Parameter Name="competencia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AD_GERA_XML_GESTORES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CNPJ" Type="varchar" Mode="In" />
+          <Parameter Name="COMPETENCIA" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AD_INDICES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="AD_RETORNA_VALIDACOES_ESTRUTURAIS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_B_Cadastro_De_Empregados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_B_Folha_De_Pagamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Competencia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Extrator_AD_C_Cadastro_De_Sindico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Competencia" Type="char" Mode="In" />
+        </Function>
+        <Function Name="Extrator_AD_C_Centro_De_Custo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_C_Fluxo_De_Caixa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_C_Identificacao_Condominio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="agencia" Type="int" Mode="In" />
+          <Parameter Name="conta" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Extrator_AD_C_Lancamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Competencia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Extrator_AD_C_Plano_De_Contas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_C_Saldo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Competencia" Type="char" Mode="In" />
+        </Function>
+        <Function Name="Extrator_AD_C_Unidades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Competencia" Type="char" Mode="In" />
+        </Function>
+        <Function Name="Extrator_AD_D_Documentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_D_Paginas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Cadastro_De_Sindico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Centro_De_Custo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Fluxo_De_Caixa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Identificacao_Condominio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Lancamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Plano_De_Contas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Extrator_AD_M_Saldo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Competencia" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="ARQUIVO_DIGITALModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ARQUIVO_DIGITALModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ARQUIVO_DIGITALEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="AD_ATUALIZA_SITUACAO_CLIENTES" />
+          <FunctionImport Name="AD_CARREGA_CONDOMINIO">
+          <Parameter Name="CNPJ" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO" ReturnType="Collection(ARQUIVO_DIGITALModel.AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO_Result)" />
+          <FunctionImport Name="AD_CRI_CONDOMINIOS_SEM_CNPJ" ReturnType="Collection(ARQUIVO_DIGITALModel.AD_CRI_CONDOMINIOS_SEM_CNPJ_Result)" />
+          <FunctionImport Name="AD_CRI_CONDOMINIOS_SEM_LANCAMENTOS">
+            <Parameter Name="Agencia" Mode="In" Type="Int32" />
+            <Parameter Name="Conta" Mode="In" Type="Int32" />
+            <Parameter Name="Origem" Mode="In" Type="String" />
+            <Parameter Name="Competencia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AD_DROPA_TABELAS_TEMPORARIAS" />
+          <FunctionImport Name="AD_FORNECEDORES_SP" ReturnType="Collection(ARQUIVO_DIGITALModel.AD_FORNECEDORES_SP_Result)">
+            <Parameter Name="ContaCliente" Mode="In" Type="String" />
+            <Parameter Name="competencia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AD_GERA_XML_GESTORES" ReturnType="Collection(ARQUIVO_DIGITALModel.AD_GERA_XML_GESTORES_Result)">
+            <Parameter Name="CNPJ" Mode="In" Type="String" />
+            <Parameter Name="COMPETENCIA" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AD_INDICES" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="Extrator_AD_B_Cadastro_De_Empregados" />
+          <FunctionImport Name="Extrator_AD_B_Folha_De_Pagamento">
+          <Parameter Name="Competencia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Extrator_AD_C_Cadastro_De_Sindico">
+          <Parameter Name="Competencia" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Extrator_AD_C_Centro_De_Custo" />
+          <FunctionImport Name="Extrator_AD_C_Fluxo_De_Caixa" />
+          <FunctionImport Name="Extrator_AD_C_Identificacao_Condominio">
+            <Parameter Name="agencia" Mode="In" Type="Int32" />
+            <Parameter Name="conta" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Extrator_AD_C_Lancamento">
+          <Parameter Name="Competencia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Extrator_AD_C_Plano_De_Contas" />
+          <FunctionImport Name="Extrator_AD_C_Saldo">
+          <Parameter Name="Competencia" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Extrator_AD_C_Unidades">
+          <Parameter Name="Competencia" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Extrator_AD_D_Documentos" />
+          <FunctionImport Name="Extrator_AD_D_Paginas" />
+          <FunctionImport Name="Extrator_AD_M_Cadastro_De_Sindico" />
+          <FunctionImport Name="Extrator_AD_M_Centro_De_Custo" />
+          <FunctionImport Name="Extrator_AD_M_Fluxo_De_Caixa" />
+          <FunctionImport Name="Extrator_AD_M_Identificacao_Condominio" />
+          <FunctionImport Name="Extrator_AD_M_Lancamento" />
+          <FunctionImport Name="Extrator_AD_M_Plano_De_Contas" />
+          <FunctionImport Name="Extrator_AD_M_Saldo">
+          <Parameter Name="Competencia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AD_RETORNA_VALIDACOES_ESTRUTURAIS" ReturnType="Collection(ARQUIVO_DIGITALModel.AD_RETORNA_VALIDACOES_ESTRUTURAIS_Result)" />
+        </EntityContainer>
+        <ComplexType Name="AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO_Result">
+          <Property Type="Decimal" Name="AGENCIA" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="CONTA" Nullable="false" Precision="5" Scale="0" />
+          <Property Type="String" Name="ORIGEM" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="BLOQUEADO" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="AD_CRI_CONDOMINIOS_SEM_CNPJ_Result">
+          <Property Type="Decimal" Name="AGENCIA" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="Int32" Name="CONTA" Nullable="true" />
+          <Property Type="String" Name="ORIGEM" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="BLOQUEADO" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="AD_FORNECEDORES_SP_Result">
+          <Property Type="String" Name="CONTA" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="CGC" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="NOME" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="TITULO" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="DOCUMENTO_FISCAL" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="DATA_DE_EMISSAO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="DATA_DE_VENCIMENTO" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="VALOR_DO_TITULO" Nullable="true" Precision="23" Scale="2" />
+          <Property Type="Decimal" Name="VALOR_PAGO" Nullable="true" Precision="23" Scale="2" />
+          <Property Type="String" Name="DATA_DE_PAGAMENTO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ORIGEM" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="AD_GERA_XML_GESTORES_Result">
+          <Property Type="Decimal" Name="AGENCIA" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="CONTA" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="GESTORES" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="NOME" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="INICIO_DE_VIGENCIA" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ORIGEM" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="AD_RETORNA_VALIDACOES_ESTRUTURAIS_Result">
+          <Property Type="Int32" Name="CODIGO" Nullable="false" />
+          <Property Type="String" Name="MENSAGEM" Nullable="false" MaxLength="13" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ARQUIVO_DIGITALModelStoreContainer" CdmEntityContainer="ARQUIVO_DIGITALEntities" >
+          <FunctionImportMapping FunctionImportName="AD_ATUALIZA_SITUACAO_CLIENTES" FunctionName="ARQUIVO_DIGITALModel.Store.AD_ATUALIZA_SITUACAO_CLIENTES" />
+          <FunctionImportMapping FunctionImportName="AD_CARREGA_CONDOMINIO" FunctionName="ARQUIVO_DIGITALModel.Store.AD_CARREGA_CONDOMINIO" />
+          <FunctionImportMapping FunctionImportName="AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO" FunctionName="ARQUIVO_DIGITALModel.Store.AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ARQUIVO_DIGITALModel.AD_CRI_CONDOMINIOS_COM_LANCAMENTO_INATIVO_Result">
+                <ScalarProperty Name="AGENCIA" ColumnName="AGENCIA" />
+                <ScalarProperty Name="CONTA" ColumnName="CONTA" />
+                <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+                <ScalarProperty Name="BLOQUEADO" ColumnName="BLOQUEADO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AD_CRI_CONDOMINIOS_SEM_CNPJ" FunctionName="ARQUIVO_DIGITALModel.Store.AD_CRI_CONDOMINIOS_SEM_CNPJ">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ARQUIVO_DIGITALModel.AD_CRI_CONDOMINIOS_SEM_CNPJ_Result">
+                <ScalarProperty Name="AGENCIA" ColumnName="AGENCIA" />
+                <ScalarProperty Name="CONTA" ColumnName="CONTA" />
+                <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+                <ScalarProperty Name="BLOQUEADO" ColumnName="BLOQUEADO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AD_CRI_CONDOMINIOS_SEM_LANCAMENTOS" FunctionName="ARQUIVO_DIGITALModel.Store.AD_CRI_CONDOMINIOS_SEM_LANCAMENTOS" />
+          <FunctionImportMapping FunctionImportName="AD_DROPA_TABELAS_TEMPORARIAS" FunctionName="ARQUIVO_DIGITALModel.Store.AD_DROPA_TABELAS_TEMPORARIAS" />
+          <FunctionImportMapping FunctionImportName="AD_FORNECEDORES_SP" FunctionName="ARQUIVO_DIGITALModel.Store.AD_FORNECEDORES_SP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ARQUIVO_DIGITALModel.AD_FORNECEDORES_SP_Result">
+                <ScalarProperty Name="CONTA" ColumnName="CONTA" />
+                <ScalarProperty Name="CGC" ColumnName="CGC" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="DOCUMENTO_FISCAL" ColumnName="DOCUMENTO_FISCAL" />
+                <ScalarProperty Name="DATA_DE_EMISSAO" ColumnName="DATA_DE_EMISSAO" />
+                <ScalarProperty Name="DATA_DE_VENCIMENTO" ColumnName="DATA_DE_VENCIMENTO" />
+                <ScalarProperty Name="VALOR_DO_TITULO" ColumnName="VALOR_DO_TITULO" />
+                <ScalarProperty Name="VALOR_PAGO" ColumnName="VALOR_PAGO" />
+                <ScalarProperty Name="DATA_DE_PAGAMENTO" ColumnName="DATA_DE_PAGAMENTO" />
+                <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AD_GERA_XML_GESTORES" FunctionName="ARQUIVO_DIGITALModel.Store.AD_GERA_XML_GESTORES">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ARQUIVO_DIGITALModel.AD_GERA_XML_GESTORES_Result">
+                <ScalarProperty Name="AGENCIA" ColumnName="AGENCIA" />
+                <ScalarProperty Name="CONTA" ColumnName="CONTA" />
+                <ScalarProperty Name="GESTORES" ColumnName="GESTORES" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="INICIO_DE_VIGENCIA" ColumnName="INICIO_DE_VIGENCIA" />
+                <ScalarProperty Name="ORIGEM" ColumnName="ORIGEM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AD_INDICES" FunctionName="ARQUIVO_DIGITALModel.Store.AD_INDICES" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_B_Cadastro_De_Empregados" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_B_Cadastro_De_Empregados" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_B_Folha_De_Pagamento" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_B_Folha_De_Pagamento" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Cadastro_De_Sindico" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Cadastro_De_Sindico" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Centro_De_Custo" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Centro_De_Custo" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Fluxo_De_Caixa" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Fluxo_De_Caixa" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Identificacao_Condominio" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Identificacao_Condominio" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Lancamento" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Lancamento" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Plano_De_Contas" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Plano_De_Contas" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Saldo" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Saldo" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_C_Unidades" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_C_Unidades" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_D_Documentos" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_D_Documentos" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_D_Paginas" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_D_Paginas" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Cadastro_De_Sindico" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Cadastro_De_Sindico" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Centro_De_Custo" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Centro_De_Custo" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Fluxo_De_Caixa" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Fluxo_De_Caixa" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Identificacao_Condominio" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Identificacao_Condominio" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Lancamento" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Lancamento" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Plano_De_Contas" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Plano_De_Contas" />
+          <FunctionImportMapping FunctionImportName="Extrator_AD_M_Saldo" FunctionName="ARQUIVO_DIGITALModel.Store.Extrator_AD_M_Saldo" />
+          <FunctionImportMapping FunctionImportName="AD_RETORNA_VALIDACOES_ESTRUTURAIS" FunctionName="ARQUIVO_DIGITALModel.Store.AD_RETORNA_VALIDACOES_ESTRUTURAIS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ARQUIVO_DIGITALModel.AD_RETORNA_VALIDACOES_ESTRUTURAIS_Result">
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="MENSAGEM" ColumnName="MENSAGEM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
